@@ -15,10 +15,10 @@ final class DashboardModelTests: XCTestCase {
         await client.publish(
             DashboardSnapshot(
                 sessions: [
-                    session("blue", status: .needsAttention),
-                    session("yellow", status: .working),
-                    session("green-1", status: .ready),
-                    session("green-2", status: .ready),
+                    session("needs-attention", status: .needsAttention),
+                    session("working", status: .working),
+                    session("ready-1", status: .ready),
+                    session("ready-2", status: .ready),
                 ]
             )
         )

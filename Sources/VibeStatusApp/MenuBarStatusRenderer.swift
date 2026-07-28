@@ -2,8 +2,8 @@ import AppKit
 import VibeStatusCore
 
 enum StatusPalette {
-    static let needsAttention = NSColor.systemBlue
-    static let working = NSColor.systemYellow
+    static let needsAttention = NSColor.systemYellow
+    static let working = NSColor.systemBlue
     static let ready = NSColor.systemGreen
 }
 

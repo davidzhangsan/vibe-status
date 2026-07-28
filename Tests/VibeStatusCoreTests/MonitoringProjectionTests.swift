@@ -10,9 +10,9 @@ final class MonitoringProjectionTests: XCTestCase {
         let snapshot = projector.hostSnapshot(
             hostID: "host-a",
             threads: [
-                thread("blue", .active, flags: ["waitingOnApproval"]),
-                thread("yellow", .active),
-                thread("green", .idle),
+                thread("needs-attention", .active, flags: ["waitingOnApproval"]),
+                thread("working", .active),
+                thread("ready", .idle),
                 thread("gone", .notLoaded),
                 thread("error", .systemError),
             ],

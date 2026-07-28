@@ -285,11 +285,11 @@ private extension TaskDisplayStatus {
     var color: Color {
         switch self {
         case .needsAttention:
-            .blue
+            Color(nsColor: StatusPalette.needsAttention)
         case .working:
-            .yellow
+            Color(nsColor: StatusPalette.working)
         case .ready:
-            .green
+            Color(nsColor: StatusPalette.ready)
         }
     }
 }

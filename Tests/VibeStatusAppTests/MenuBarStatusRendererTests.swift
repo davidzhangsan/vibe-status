@@ -1,8 +1,15 @@
+import AppKit
 import XCTest
 import VibeStatusCore
 @testable import VibeStatus
 
 final class MenuBarStatusRendererTests: XCTestCase {
+    func testPaletteUsesYellowForAttentionBlueForWorkingAndGreenForReady() {
+        XCTAssertTrue(StatusPalette.needsAttention.isEqual(NSColor.systemYellow))
+        XCTAssertTrue(StatusPalette.working.isEqual(NSColor.systemBlue))
+        XCTAssertTrue(StatusPalette.ready.isEqual(NSColor.systemGreen))
+    }
+
     func testAccessibilityLabelIncludesAllStatusesAndZeroes() {
         let counts = StatusCounts(needsAttention: 0, working: 4, ready: 2)
 

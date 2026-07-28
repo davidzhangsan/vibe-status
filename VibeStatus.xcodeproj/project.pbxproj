@@ -1,0 +1,913 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		027BEAEF9DB61D6C67182FB6 /* MenuBarStatusRendererTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29266F479F9FEC727FC6D31 /* MenuBarStatusRendererTests.swift */; };
+		075DC852A05FF855E41FFC33 /* BoundedDiagnosticRing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7E48E2D656BB5CE67718D4 /* BoundedDiagnosticRing.swift */; };
+		0E436572EED8C2B49CE03F63 /* MonitoringEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE6CEA9F95F6A180CED8832 /* MonitoringEngine.swift */; };
+		1944748CFC6B33E4BAA62D69 /* NIOWebSocketTextTransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7D4B18EE215337D924AD6A /* NIOWebSocketTextTransport.swift */; };
+		1B28A57638B274C21BA544D4 /* SSHHostValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1F5E0EAABB7AFB191746B5 /* SSHHostValidator.swift */; };
+		30394E6645387065533BC9E5 /* VibeStatusCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87CF96B21ADDE77ED5AC9DB0 /* VibeStatusCore.framework */; };
+		32E9A4C06FA34A1404325174 /* SSHValidationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08CFC404C9EFB935C9F0A8A /* SSHValidationTests.swift */; };
+		3347138ED50B8D3E555F4E43 /* SSHInputValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1386961029B15400BD40B7 /* SSHInputValidator.swift */; };
+		35F23D6EAA8A6524B461E595 /* NIOWebSocket in Frameworks */ = {isa = PBXBuildFile; productRef = D76927A18BF6D88D8959C25D /* NIOWebSocket */; };
+		36163B44C1550538EC9A39CA /* VibeStatusCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 87CF96B21ADDE77ED5AC9DB0 /* VibeStatusCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		37004CC9F153774660526C2D /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5D47B118BC011E3EEF806A /* SettingsView.swift */; };
+		4A766838A88995E9BE5B904F /* CodexRPCClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECDC06381B8B049704082AC /* CodexRPCClient.swift */; };
+		4DD8FA55E052957F695DBDF6 /* HostProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF7BE3A57A4C174F3FCD97B /* HostProfile.swift */; };
+		52E5B5C5DE22946C63DC76E5 /* MonitoringEngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56F8F57137A902E60540FBE /* MonitoringEngineTests.swift */; };
+		55343E5112AC66B6F2DF1813 /* ProtocolModelsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A49E28FC3A17929FB3183BD /* ProtocolModelsTests.swift */; };
+		55547F25ED8F2ABC173DE8EA /* MenuBarStatusRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA079B2BA767FDB492B039E /* MenuBarStatusRenderer.swift */; };
+		5C1B651A625101D9D7F987B5 /* DashboardModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C851938E25560EFF44897DE0 /* DashboardModelTests.swift */; };
+		5C1C062D599C4E660025BA11 /* SSHConfigAliasDiscovery.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAE76F2798BFE222678CEE2 /* SSHConfigAliasDiscovery.swift */; };
+		6239541BC2331B4769B40FA6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F97B2BEC66B06B30B8F0F41 /* AppDelegate.swift */; };
+		6A740A2F1B503486C21FA45D /* SSHConfigAliasDiscoveryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410F1DF79D2F4C285C6F608E /* SSHConfigAliasDiscoveryTests.swift */; };
+		6C4A74F95695EEF5D6C14B02 /* DomainModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85A86CEB364C9AB182682C6 /* DomainModels.swift */; };
+		6CEF1C91908B1A1443DAA2B9 /* JSONValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46620E740E63152C5E39ADF /* JSONValue.swift */; };
+		72B9B69F9E21AA967C4AC06C /* ProtocolJSONRPCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B0D8A22AB50C8DC097BE67 /* ProtocolJSONRPCTests.swift */; };
+		7A16686078D67F107014A982 /* TransportWebSocketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314B89F4CA03C3506D05C56A /* TransportWebSocketTests.swift */; };
+		7D40154334F320E38718E428 /* ClusterSupervisor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D7C7A3D5DF233CCC1956C2 /* ClusterSupervisor.swift */; };
+		7E118A345B1734BBCD7AF680 /* ProtocolRPCClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686A1791EEF4EDF6294A72FE /* ProtocolRPCClientTests.swift */; };
+		80299F7A4382533E67443888 /* LiveDashboardClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A18AE34FCA141F814D30DAA /* LiveDashboardClient.swift */; };
+		858041B68798F6A119E567E1 /* CodexProtocolModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DF7C990B2A9B2EB5EBA3D4 /* CodexProtocolModels.swift */; };
+		8DFE9353794BCAF26ED1A04C /* VibeStatusCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87CF96B21ADDE77ED5AC9DB0 /* VibeStatusCore.framework */; };
+		8EC632397B23F977525D1F36 /* ConfigurationStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBDF4E23A0412DC5D7D7B80 /* ConfigurationStoreTests.swift */; };
+		9D5D4AF5DB73A45906BC63D5 /* DashboardPopoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B543312730EC80DEF49E93E /* DashboardPopoverView.swift */; };
+		A0CF1B5EA74A13554A384A56 /* JSONRPC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3067C1ED519B631F59CD8EDF /* JSONRPC.swift */; };
+		AAD59007D703757890098DE7 /* VibeStatusApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F60106AEEEDF5943D9A8AF /* VibeStatusApplication.swift */; };
+		BA88E3201A563BFF6A2C9D4E /* DashboardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDE443E2D020C9B2DA83CC2 /* DashboardModel.swift */; };
+		BBE96EC9EBD114B139F5242D /* VibeStatusCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 87CF96B21ADDE77ED5AC9DB0 /* VibeStatusCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BEAAFA493F67A9E3F0A6D9D4 /* VibeStatusCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87CF96B21ADDE77ED5AC9DB0 /* VibeStatusCore.framework */; };
+		C6105B6275AC7CBF87668AB6 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA55E557DE8745C5E60FBE3 /* OnboardingView.swift */; };
+		C7136296ACB8874F13AA80DB /* UserDefaultsConfigurationStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133CC4A38E98DC2A4DDB851C /* UserDefaultsConfigurationStore.swift */; };
+		CB2DEC8210C963BE1AFEA83C /* MonitoringProjectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3726441B764BFBF422A3393C /* MonitoringProjectionTests.swift */; };
+		D1FE80640E8D63E9CB6BEE4B /* SSHProcessTransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3736999DE8B10BA00E5AECA /* SSHProcessTransport.swift */; };
+		D6D4ED8720173632F2E341DE /* POSIXShell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D07EA65775B5617BD4AF07 /* POSIXShell.swift */; };
+		DCEC26C8A5B6A9606FFA24BB /* ThreadProjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A776C0C93005B3ED85D6D5 /* ThreadProjection.swift */; };
+		DE28BC197F5057CA95FA9AA6 /* MonitoringPolicies.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB18D1FA474188F44ADF8BA /* MonitoringPolicies.swift */; };
+		F5F42EE35B45F42EF81475D8 /* SSHCommandBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA316DF9D687D1574966EE4 /* SSHCommandBuilder.swift */; };
+		F6D28609E9E8F9FE2F899BAF /* MonitoringSupervisorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB469537F968B9BFBF68468A /* MonitoringSupervisorTests.swift */; };
+		FB3294565337738F8F2710A4 /* VibeStatusCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 87CF96B21ADDE77ED5AC9DB0 /* VibeStatusCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		52E5145D19BDA85B53D43404 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 09697440FA9379D005A3F779 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 39E544D97E60FB8707292710;
+			remoteInfo = VibeStatus;
+		};
+		785F4DBE38B4165DF62C92BC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 09697440FA9379D005A3F779 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7DF3F8C669965D1798424F53;
+			remoteInfo = VibeStatusCore;
+		};
+		CB65BAF1BF46671247DAA962 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 09697440FA9379D005A3F779 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7DF3F8C669965D1798424F53;
+			remoteInfo = VibeStatusCore;
+		};
+		DE00FAB60D23EC7DF569A052 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 09697440FA9379D005A3F779 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7DF3F8C669965D1798424F53;
+			remoteInfo = VibeStatusCore;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2350B9D0344BEA9DFAD67972 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				BBE96EC9EBD114B139F5242D /* VibeStatusCore.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		625CD3E8F4E34F97738C788B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				36163B44C1550538EC9A39CA /* VibeStatusCore.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DFBD8558B76684B994F5BC46 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				FB3294565337738F8F2710A4 /* VibeStatusCore.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0A18AE34FCA141F814D30DAA /* LiveDashboardClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveDashboardClient.swift; sourceTree = "<group>"; };
+		0A49E28FC3A17929FB3183BD /* ProtocolModelsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolModelsTests.swift; sourceTree = "<group>"; };
+		0B543312730EC80DEF49E93E /* DashboardPopoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardPopoverView.swift; sourceTree = "<group>"; };
+		133CC4A38E98DC2A4DDB851C /* UserDefaultsConfigurationStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsConfigurationStore.swift; sourceTree = "<group>"; };
+		1689F1CF1108CF4180FB7C9F /* VibeStatusAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VibeStatusAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D1D2A93D202FD3350744520 /* VibeStatus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VibeStatus.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3067C1ED519B631F59CD8EDF /* JSONRPC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONRPC.swift; sourceTree = "<group>"; };
+		314B89F4CA03C3506D05C56A /* TransportWebSocketTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportWebSocketTests.swift; sourceTree = "<group>"; };
+		346642309EDD85BC99834BE2 /* VibeStatusCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VibeStatusCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		35F60106AEEEDF5943D9A8AF /* VibeStatusApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VibeStatusApplication.swift; sourceTree = "<group>"; };
+		3726441B764BFBF422A3393C /* MonitoringProjectionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitoringProjectionTests.swift; sourceTree = "<group>"; };
+		410F1DF79D2F4C285C6F608E /* SSHConfigAliasDiscoveryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSHConfigAliasDiscoveryTests.swift; sourceTree = "<group>"; };
+		48D7C7A3D5DF233CCC1956C2 /* ClusterSupervisor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClusterSupervisor.swift; sourceTree = "<group>"; };
+		5E7E48E2D656BB5CE67718D4 /* BoundedDiagnosticRing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoundedDiagnosticRing.swift; sourceTree = "<group>"; };
+		686A1791EEF4EDF6294A72FE /* ProtocolRPCClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolRPCClientTests.swift; sourceTree = "<group>"; };
+		6BF7BE3A57A4C174F3FCD97B /* HostProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostProfile.swift; sourceTree = "<group>"; };
+		86DF7C990B2A9B2EB5EBA3D4 /* CodexProtocolModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodexProtocolModels.swift; sourceTree = "<group>"; };
+		87CF96B21ADDE77ED5AC9DB0 /* VibeStatusCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VibeStatusCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8ECDC06381B8B049704082AC /* CodexRPCClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodexRPCClient.swift; sourceTree = "<group>"; };
+		9BBDF4E23A0412DC5D7D7B80 /* ConfigurationStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationStoreTests.swift; sourceTree = "<group>"; };
+		9CE6CEA9F95F6A180CED8832 /* MonitoringEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitoringEngine.swift; sourceTree = "<group>"; };
+		9D1F5E0EAABB7AFB191746B5 /* SSHHostValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSHHostValidator.swift; sourceTree = "<group>"; };
+		9F97B2BEC66B06B30B8F0F41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A29266F479F9FEC727FC6D31 /* MenuBarStatusRendererTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarStatusRendererTests.swift; sourceTree = "<group>"; };
+		A4B0D8A22AB50C8DC097BE67 /* ProtocolJSONRPCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolJSONRPCTests.swift; sourceTree = "<group>"; };
+		AAA316DF9D687D1574966EE4 /* SSHCommandBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSHCommandBuilder.swift; sourceTree = "<group>"; };
+		AC1386961029B15400BD40B7 /* SSHInputValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSHInputValidator.swift; sourceTree = "<group>"; };
+		ADA079B2BA767FDB492B039E /* MenuBarStatusRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarStatusRenderer.swift; sourceTree = "<group>"; };
+		B7A776C0C93005B3ED85D6D5 /* ThreadProjection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadProjection.swift; sourceTree = "<group>"; };
+		B85A86CEB364C9AB182682C6 /* DomainModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainModels.swift; sourceTree = "<group>"; };
+		C851938E25560EFF44897DE0 /* DashboardModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardModelTests.swift; sourceTree = "<group>"; };
+		CB469537F968B9BFBF68468A /* MonitoringSupervisorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitoringSupervisorTests.swift; sourceTree = "<group>"; };
+		D08CFC404C9EFB935C9F0A8A /* SSHValidationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSHValidationTests.swift; sourceTree = "<group>"; };
+		DAA55E557DE8745C5E60FBE3 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		DDDE443E2D020C9B2DA83CC2 /* DashboardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardModel.swift; sourceTree = "<group>"; };
+		EC7D4B18EE215337D924AD6A /* NIOWebSocketTextTransport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NIOWebSocketTextTransport.swift; sourceTree = "<group>"; };
+		EEB18D1FA474188F44ADF8BA /* MonitoringPolicies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitoringPolicies.swift; sourceTree = "<group>"; };
+		F3736999DE8B10BA00E5AECA /* SSHProcessTransport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSHProcessTransport.swift; sourceTree = "<group>"; };
+		F46620E740E63152C5E39ADF /* JSONValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONValue.swift; sourceTree = "<group>"; };
+		F4D07EA65775B5617BD4AF07 /* POSIXShell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POSIXShell.swift; sourceTree = "<group>"; };
+		F56F8F57137A902E60540FBE /* MonitoringEngineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitoringEngineTests.swift; sourceTree = "<group>"; };
+		FAAE76F2798BFE222678CEE2 /* SSHConfigAliasDiscovery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSHConfigAliasDiscovery.swift; sourceTree = "<group>"; };
+		FD5D47B118BC011E3EEF806A /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		190870F7E72CCD0C66E0C5D9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30394E6645387065533BC9E5 /* VibeStatusCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8687B64FA95AFC678F6D5ADB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DFE9353794BCAF26ED1A04C /* VibeStatusCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5126A4F5D0AE8CF626F9295 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35F23D6EAA8A6524B461E595 /* NIOWebSocket in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C54B9A92149472EC6BB8B808 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEAAFA493F67A9E3F0A6D9D4 /* VibeStatusCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1B2D15E86F92C1AF5A295CD1 /* Transport */ = {
+			isa = PBXGroup;
+			children = (
+				EC7D4B18EE215337D924AD6A /* NIOWebSocketTextTransport.swift */,
+			);
+			path = Transport;
+			sourceTree = "<group>";
+		};
+		36C7E1195DFE753B0A9BD250 /* SSH */ = {
+			isa = PBXGroup;
+			children = (
+				5E7E48E2D656BB5CE67718D4 /* BoundedDiagnosticRing.swift */,
+				F4D07EA65775B5617BD4AF07 /* POSIXShell.swift */,
+				AAA316DF9D687D1574966EE4 /* SSHCommandBuilder.swift */,
+				FAAE76F2798BFE222678CEE2 /* SSHConfigAliasDiscovery.swift */,
+				9D1F5E0EAABB7AFB191746B5 /* SSHHostValidator.swift */,
+				AC1386961029B15400BD40B7 /* SSHInputValidator.swift */,
+				F3736999DE8B10BA00E5AECA /* SSHProcessTransport.swift */,
+			);
+			path = SSH;
+			sourceTree = "<group>";
+		};
+		3712729E0AF834C78AEDC851 = {
+			isa = PBXGroup;
+			children = (
+				E48A2D7A8466DE95D3085D74 /* Sources */,
+				C846938C354E4B3AABC817C7 /* Tests */,
+				9F6F25C465A723712152CB06 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		42BB90F576CF7C2EF9B9DDB9 /* VibeStatusApp */ = {
+			isa = PBXGroup;
+			children = (
+				9F97B2BEC66B06B30B8F0F41 /* AppDelegate.swift */,
+				DDDE443E2D020C9B2DA83CC2 /* DashboardModel.swift */,
+				0B543312730EC80DEF49E93E /* DashboardPopoverView.swift */,
+				0A18AE34FCA141F814D30DAA /* LiveDashboardClient.swift */,
+				ADA079B2BA767FDB492B039E /* MenuBarStatusRenderer.swift */,
+				DAA55E557DE8745C5E60FBE3 /* OnboardingView.swift */,
+				FD5D47B118BC011E3EEF806A /* SettingsView.swift */,
+				35F60106AEEEDF5943D9A8AF /* VibeStatusApplication.swift */,
+			);
+			path = VibeStatusApp;
+			sourceTree = "<group>";
+		};
+		61844BCBFD58E9F3ED8E53D5 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				86DF7C990B2A9B2EB5EBA3D4 /* CodexProtocolModels.swift */,
+				8ECDC06381B8B049704082AC /* CodexRPCClient.swift */,
+				3067C1ED519B631F59CD8EDF /* JSONRPC.swift */,
+				F46620E740E63152C5E39ADF /* JSONValue.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		9163DD5435DF69B12538CD69 /* Monitoring */ = {
+			isa = PBXGroup;
+			children = (
+				48D7C7A3D5DF233CCC1956C2 /* ClusterSupervisor.swift */,
+				B85A86CEB364C9AB182682C6 /* DomainModels.swift */,
+				9CE6CEA9F95F6A180CED8832 /* MonitoringEngine.swift */,
+				EEB18D1FA474188F44ADF8BA /* MonitoringPolicies.swift */,
+				B7A776C0C93005B3ED85D6D5 /* ThreadProjection.swift */,
+			);
+			path = Monitoring;
+			sourceTree = "<group>";
+		};
+		9F6F25C465A723712152CB06 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2D1D2A93D202FD3350744520 /* VibeStatus.app */,
+				1689F1CF1108CF4180FB7C9F /* VibeStatusAppTests.xctest */,
+				87CF96B21ADDE77ED5AC9DB0 /* VibeStatusCore.framework */,
+				346642309EDD85BC99834BE2 /* VibeStatusCoreTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A4217F55E5533D34DF5DFB6C /* VibeStatusAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				C851938E25560EFF44897DE0 /* DashboardModelTests.swift */,
+				A29266F479F9FEC727FC6D31 /* MenuBarStatusRendererTests.swift */,
+			);
+			path = VibeStatusAppTests;
+			sourceTree = "<group>";
+		};
+		B1535295DC871379636FFB0E /* VibeStatusCoreTests */ = {
+			isa = PBXGroup;
+			children = (
+				9BBDF4E23A0412DC5D7D7B80 /* ConfigurationStoreTests.swift */,
+				F56F8F57137A902E60540FBE /* MonitoringEngineTests.swift */,
+				3726441B764BFBF422A3393C /* MonitoringProjectionTests.swift */,
+				CB469537F968B9BFBF68468A /* MonitoringSupervisorTests.swift */,
+				A4B0D8A22AB50C8DC097BE67 /* ProtocolJSONRPCTests.swift */,
+				0A49E28FC3A17929FB3183BD /* ProtocolModelsTests.swift */,
+				686A1791EEF4EDF6294A72FE /* ProtocolRPCClientTests.swift */,
+				410F1DF79D2F4C285C6F608E /* SSHConfigAliasDiscoveryTests.swift */,
+				D08CFC404C9EFB935C9F0A8A /* SSHValidationTests.swift */,
+				314B89F4CA03C3506D05C56A /* TransportWebSocketTests.swift */,
+			);
+			path = VibeStatusCoreTests;
+			sourceTree = "<group>";
+		};
+		C846938C354E4B3AABC817C7 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				A4217F55E5533D34DF5DFB6C /* VibeStatusAppTests */,
+				B1535295DC871379636FFB0E /* VibeStatusCoreTests */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		CDD1959BD8C32AF5D1B4B932 /* VibeStatusCore */ = {
+			isa = PBXGroup;
+			children = (
+				D96ADCD9402E493AC2BB9FE9 /* Configuration */,
+				9163DD5435DF69B12538CD69 /* Monitoring */,
+				61844BCBFD58E9F3ED8E53D5 /* Protocol */,
+				36C7E1195DFE753B0A9BD250 /* SSH */,
+				1B2D15E86F92C1AF5A295CD1 /* Transport */,
+			);
+			path = VibeStatusCore;
+			sourceTree = "<group>";
+		};
+		D96ADCD9402E493AC2BB9FE9 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				6BF7BE3A57A4C174F3FCD97B /* HostProfile.swift */,
+				133CC4A38E98DC2A4DDB851C /* UserDefaultsConfigurationStore.swift */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		E48A2D7A8466DE95D3085D74 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				42BB90F576CF7C2EF9B9DDB9 /* VibeStatusApp */,
+				CDD1959BD8C32AF5D1B4B932 /* VibeStatusCore */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		39E544D97E60FB8707292710 /* VibeStatus */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA4E7FED3131E09754CFE2B1 /* Build configuration list for PBXNativeTarget "VibeStatus" */;
+			buildPhases = (
+				8D96DB510B277D9C842C455B /* Sources */,
+				C54B9A92149472EC6BB8B808 /* Frameworks */,
+				625CD3E8F4E34F97738C788B /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				67F4900D0F8915F4A5755FC9 /* PBXTargetDependency */,
+			);
+			name = VibeStatus;
+			packageProductDependencies = (
+			);
+			productName = VibeStatus;
+			productReference = 2D1D2A93D202FD3350744520 /* VibeStatus.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4613B25A437965BC2700292B /* VibeStatusCoreTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 850F92150A48D316A527D1C9 /* Build configuration list for PBXNativeTarget "VibeStatusCoreTests" */;
+			buildPhases = (
+				0F35428E3B049B0A795B4FB1 /* Sources */,
+				8687B64FA95AFC678F6D5ADB /* Frameworks */,
+				DFBD8558B76684B994F5BC46 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4372DC7D4A3ABE97B90ADEFC /* PBXTargetDependency */,
+			);
+			name = VibeStatusCoreTests;
+			packageProductDependencies = (
+			);
+			productName = VibeStatusCoreTests;
+			productReference = 346642309EDD85BC99834BE2 /* VibeStatusCoreTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7DF3F8C669965D1798424F53 /* VibeStatusCore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D6B9A89D782489318E595F02 /* Build configuration list for PBXNativeTarget "VibeStatusCore" */;
+			buildPhases = (
+				6833C3E8D807051E2743F2CB /* Sources */,
+				B5126A4F5D0AE8CF626F9295 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VibeStatusCore;
+			packageProductDependencies = (
+				D76927A18BF6D88D8959C25D /* NIOWebSocket */,
+			);
+			productName = VibeStatusCore;
+			productReference = 87CF96B21ADDE77ED5AC9DB0 /* VibeStatusCore.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D192C6DEE4D3418DB594A14B /* VibeStatusAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DDD5B60804D81F226E38F713 /* Build configuration list for PBXNativeTarget "VibeStatusAppTests" */;
+			buildPhases = (
+				8836382BC798E5FF011C044A /* Sources */,
+				190870F7E72CCD0C66E0C5D9 /* Frameworks */,
+				2350B9D0344BEA9DFAD67972 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2083AA556FC02F3EEC9B6F17 /* PBXTargetDependency */,
+				8F869BA98853FB2B217B54D1 /* PBXTargetDependency */,
+			);
+			name = VibeStatusAppTests;
+			packageProductDependencies = (
+			);
+			productName = VibeStatusAppTests;
+			productReference = 1689F1CF1108CF4180FB7C9F /* VibeStatusAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		09697440FA9379D005A3F779 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					39E544D97E60FB8707292710 = {
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = 0BD8FD09A3A59F50304383C8 /* Build configuration list for PBXProject "VibeStatus" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 3712729E0AF834C78AEDC851;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				4A74771636492E17C64172B2 /* XCRemoteSwiftPackageReference "swift-nio" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 9F6F25C465A723712152CB06 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7DF3F8C669965D1798424F53 /* VibeStatusCore */,
+				39E544D97E60FB8707292710 /* VibeStatus */,
+				4613B25A437965BC2700292B /* VibeStatusCoreTests */,
+				D192C6DEE4D3418DB594A14B /* VibeStatusAppTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0F35428E3B049B0A795B4FB1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8EC632397B23F977525D1F36 /* ConfigurationStoreTests.swift in Sources */,
+				52E5B5C5DE22946C63DC76E5 /* MonitoringEngineTests.swift in Sources */,
+				CB2DEC8210C963BE1AFEA83C /* MonitoringProjectionTests.swift in Sources */,
+				F6D28609E9E8F9FE2F899BAF /* MonitoringSupervisorTests.swift in Sources */,
+				72B9B69F9E21AA967C4AC06C /* ProtocolJSONRPCTests.swift in Sources */,
+				55343E5112AC66B6F2DF1813 /* ProtocolModelsTests.swift in Sources */,
+				7E118A345B1734BBCD7AF680 /* ProtocolRPCClientTests.swift in Sources */,
+				6A740A2F1B503486C21FA45D /* SSHConfigAliasDiscoveryTests.swift in Sources */,
+				32E9A4C06FA34A1404325174 /* SSHValidationTests.swift in Sources */,
+				7A16686078D67F107014A982 /* TransportWebSocketTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6833C3E8D807051E2743F2CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				075DC852A05FF855E41FFC33 /* BoundedDiagnosticRing.swift in Sources */,
+				7D40154334F320E38718E428 /* ClusterSupervisor.swift in Sources */,
+				858041B68798F6A119E567E1 /* CodexProtocolModels.swift in Sources */,
+				4A766838A88995E9BE5B904F /* CodexRPCClient.swift in Sources */,
+				6C4A74F95695EEF5D6C14B02 /* DomainModels.swift in Sources */,
+				4DD8FA55E052957F695DBDF6 /* HostProfile.swift in Sources */,
+				A0CF1B5EA74A13554A384A56 /* JSONRPC.swift in Sources */,
+				6CEF1C91908B1A1443DAA2B9 /* JSONValue.swift in Sources */,
+				0E436572EED8C2B49CE03F63 /* MonitoringEngine.swift in Sources */,
+				DE28BC197F5057CA95FA9AA6 /* MonitoringPolicies.swift in Sources */,
+				1944748CFC6B33E4BAA62D69 /* NIOWebSocketTextTransport.swift in Sources */,
+				D6D4ED8720173632F2E341DE /* POSIXShell.swift in Sources */,
+				F5F42EE35B45F42EF81475D8 /* SSHCommandBuilder.swift in Sources */,
+				5C1C062D599C4E660025BA11 /* SSHConfigAliasDiscovery.swift in Sources */,
+				1B28A57638B274C21BA544D4 /* SSHHostValidator.swift in Sources */,
+				3347138ED50B8D3E555F4E43 /* SSHInputValidator.swift in Sources */,
+				D1FE80640E8D63E9CB6BEE4B /* SSHProcessTransport.swift in Sources */,
+				DCEC26C8A5B6A9606FFA24BB /* ThreadProjection.swift in Sources */,
+				C7136296ACB8874F13AA80DB /* UserDefaultsConfigurationStore.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8836382BC798E5FF011C044A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C1B651A625101D9D7F987B5 /* DashboardModelTests.swift in Sources */,
+				027BEAEF9DB61D6C67182FB6 /* MenuBarStatusRendererTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D96DB510B277D9C842C455B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6239541BC2331B4769B40FA6 /* AppDelegate.swift in Sources */,
+				BA88E3201A563BFF6A2C9D4E /* DashboardModel.swift in Sources */,
+				9D5D4AF5DB73A45906BC63D5 /* DashboardPopoverView.swift in Sources */,
+				80299F7A4382533E67443888 /* LiveDashboardClient.swift in Sources */,
+				55547F25ED8F2ABC173DE8EA /* MenuBarStatusRenderer.swift in Sources */,
+				C6105B6275AC7CBF87668AB6 /* OnboardingView.swift in Sources */,
+				37004CC9F153774660526C2D /* SettingsView.swift in Sources */,
+				AAD59007D703757890098DE7 /* VibeStatusApplication.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2083AA556FC02F3EEC9B6F17 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 39E544D97E60FB8707292710 /* VibeStatus */;
+			targetProxy = 52E5145D19BDA85B53D43404 /* PBXContainerItemProxy */;
+		};
+		4372DC7D4A3ABE97B90ADEFC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7DF3F8C669965D1798424F53 /* VibeStatusCore */;
+			targetProxy = DE00FAB60D23EC7DF569A052 /* PBXContainerItemProxy */;
+		};
+		67F4900D0F8915F4A5755FC9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7DF3F8C669965D1798424F53 /* VibeStatusCore */;
+			targetProxy = 785F4DBE38B4165DF62C92BC /* PBXContainerItemProxy */;
+		};
+		8F869BA98853FB2B217B54D1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7DF3F8C669965D1798424F53 /* VibeStatusCore */;
+			targetProxy = CB65BAF1BF46671247DAA962 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		29DB38C8632C945EB52D65BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGNING_ALLOWED = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jamescai.VibeStatusCoreTests;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		37F7C2C32C0CB4F89BBC7FA6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGN_IDENTITY = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jamescai.VibeStatusCore;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+		38504DFC3F857795ED2DBB0F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGNING_ALLOWED = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jamescai.VibeStatusAppTests;
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VibeStatus.app/Contents/MacOS/VibeStatus";
+			};
+			name = Release;
+		};
+		3B590A9DF7732635B02A1A79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGNING_ALLOWED = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jamescai.VibeStatusAppTests;
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VibeStatus.app/Contents/MacOS/VibeStatus";
+			};
+			name = Debug;
+		};
+		4874B9B52294ADFB903378E9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_APP_SANDBOX = NO;
+				INFOPLIST_FILE = Config/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jamescai.VibeStatus;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		7309BE0C6D930A6883129981 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_APP_SANDBOX = NO;
+				INFOPLIST_FILE = Config/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jamescai.VibeStatus;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		7D66262AB03F47BFDD9B94A0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGN_IDENTITY = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jamescai.VibeStatusCore;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug;
+		};
+		AD20F96ABEFCD5F0F42101CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGNING_ALLOWED = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jamescai.VibeStatusCoreTests;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		E1753F82B4B814C58DBC87B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+		E1B4EF5E9EA46DDE6DE42284 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0BD8FD09A3A59F50304383C8 /* Build configuration list for PBXProject "VibeStatus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E1B4EF5E9EA46DDE6DE42284 /* Debug */,
+				E1753F82B4B814C58DBC87B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		850F92150A48D316A527D1C9 /* Build configuration list for PBXNativeTarget "VibeStatusCoreTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				29DB38C8632C945EB52D65BB /* Debug */,
+				AD20F96ABEFCD5F0F42101CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		AA4E7FED3131E09754CFE2B1 /* Build configuration list for PBXNativeTarget "VibeStatus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7309BE0C6D930A6883129981 /* Debug */,
+				4874B9B52294ADFB903378E9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		D6B9A89D782489318E595F02 /* Build configuration list for PBXNativeTarget "VibeStatusCore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D66262AB03F47BFDD9B94A0 /* Debug */,
+				37F7C2C32C0CB4F89BBC7FA6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		DDD5B60804D81F226E38F713 /* Build configuration list for PBXNativeTarget "VibeStatusAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B590A9DF7732635B02A1A79 /* Debug */,
+				38504DFC3F857795ED2DBB0F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4A74771636492E17C64172B2 /* XCRemoteSwiftPackageReference "swift-nio" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-nio.git";
+			requirement = {
+				kind = exactVersion;
+				version = 2.101.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D76927A18BF6D88D8959C25D /* NIOWebSocket */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4A74771636492E17C64172B2 /* XCRemoteSwiftPackageReference "swift-nio" */;
+			productName = NIOWebSocket;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 09697440FA9379D005A3F779 /* Project object */;
+}

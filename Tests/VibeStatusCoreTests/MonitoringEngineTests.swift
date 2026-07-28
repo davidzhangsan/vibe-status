@@ -1,0 +1,89 @@
+import Foundation
+import XCTest
+@testable import VibeStatusCore
+
+final class MonitoringEngineTests: XCTestCase {
+    func testMergesHostsAndDropsSessionsImmediatelyOnDisconnect() async {
+        let engine = MonitoringEngine()
+        let date = Date(timeIntervalSince1970: 10)
+        await engine.replaceHost(
+            .init(
+                hostID: "host-a",
+                sessions: [
+                    .init(
+                        hostID: "host-a",
+                        threadID: "a",
+                        name: "A",
+                        updatedAt: date,
+                        status: .ready
+                    ),
+                ]
+            )
+        )
+        await engine.replaceHost(
+            .init(
+                hostID: "host-b",
+                sessions: [
+                    .init(
+                        hostID: "host-b",
+                        threadID: "b",
+                        name: "B",
+                        updatedAt: date,
+                        status: .working
+                    ),
+                ]
+            )
+        )
+
+        var snapshot = await engine.currentSnapshot()
+        XCTAssertEqual(snapshot.sessions.count, 2)
+        XCTAssertEqual(snapshot.counts, .init(needsAttention: 0, working: 1, ready: 1))
+
+        await engine.markHostDisconnected(
+            hostID: "host-b",
+            message: "Connection lost",
+            at: date
+        )
+        snapshot = await engine.currentSnapshot()
+        XCTAssertEqual(snapshot.sessions.map(\.hostID), ["host-a"])
+        XCTAssertEqual(snapshot.issues.first?.kind, .disconnected)
+    }
+
+    func testSnapshotStreamYieldsInitialAndReplacementValues() async {
+        let engine = MonitoringEngine()
+        let stream = await engine.snapshots()
+        var iterator = stream.makeAsyncIterator()
+
+        let initial = await iterator.next()
+        XCTAssertEqual(initial, .empty)
+
+        await engine.replaceHost(
+            .init(
+                hostID: "host-a",
+                sessions: [
+                    .init(
+                        hostID: "host-a",
+                        threadID: "a",
+                        name: "A",
+                        updatedAt: .distantPast,
+                        status: .ready
+                    ),
+                ]
+            )
+        )
+        let replacement = await iterator.next()
+        XCTAssertEqual(replacement?.counts.ready, 1)
+    }
+
+    func testReconnectAndReconcilePolicyEdges() {
+        let reconnect = ReconnectPolicy()
+        XCTAssertEqual(reconnect.delay(forFailureCount: 1, jitterUnit: 0), 1)
+        XCTAssertEqual(reconnect.delay(forFailureCount: 6, jitterUnit: 0), 30)
+        XCTAssertEqual(reconnect.delay(forFailureCount: 99, jitterUnit: 1), 36)
+        XCTAssertEqual(reconnect.delay(forFailureCount: 1, jitterUnit: -1), 0.8)
+
+        let reconcile = ReconcilePolicy(interval: 15, jitterFraction: 0.2)
+        XCTAssertEqual(reconcile.delay(jitterUnit: -1), 12)
+        XCTAssertEqual(reconcile.delay(jitterUnit: 1), 18)
+    }
+}

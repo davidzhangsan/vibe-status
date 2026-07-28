@@ -1,0 +1,93 @@
+name: VibeStatus
+
+options:
+  bundleIdPrefix: com.jamescai
+  createIntermediateGroups: true
+  deploymentTarget:
+    macOS: "14.0"
+
+settings:
+  base:
+    SWIFT_VERSION: "6.0"
+    SWIFT_STRICT_CONCURRENCY: complete
+    MACOSX_DEPLOYMENT_TARGET: "14.0"
+
+packages:
+  SwiftNIO:
+    url: https://github.com/apple/swift-nio.git
+    exactVersion: 2.101.3
+
+targets:
+  VibeStatusCore:
+    type: framework
+    platform: macOS
+    sources:
+      - Sources/VibeStatusCore
+    dependencies:
+      - package: SwiftNIO
+        product: NIOWebSocket
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.jamescai.VibeStatusCore
+        GENERATE_INFOPLIST_FILE: true
+        CODE_SIGNING_ALLOWED: false
+
+  VibeStatus:
+    type: application
+    platform: macOS
+    sources:
+      - Sources/VibeStatusApp
+    info:
+      path: Config/Info.plist
+      properties:
+        CFBundleDisplayName: Vibe Status
+        CFBundleName: Vibe Status
+        CFBundleShortVersionString: 0.1.0
+        CFBundleVersion: "1"
+        LSUIElement: true
+    dependencies:
+      - target: VibeStatusCore
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.jamescai.VibeStatus
+        CODE_SIGN_IDENTITY: "-"
+        CODE_SIGN_STYLE: Manual
+        ENABLE_APP_SANDBOX: false
+
+  VibeStatusCoreTests:
+    type: bundle.unit-test
+    platform: macOS
+    sources:
+      - Tests/VibeStatusCoreTests
+    dependencies:
+      - target: VibeStatusCore
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.jamescai.VibeStatusCoreTests
+        GENERATE_INFOPLIST_FILE: true
+        CODE_SIGNING_ALLOWED: false
+
+  VibeStatusAppTests:
+    type: bundle.unit-test
+    platform: macOS
+    sources:
+      - Tests/VibeStatusAppTests
+    dependencies:
+      - target: VibeStatus
+      - target: VibeStatusCore
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.jamescai.VibeStatusAppTests
+        GENERATE_INFOPLIST_FILE: true
+        CODE_SIGNING_ALLOWED: false
+
+schemes:
+  VibeStatus:
+    build:
+      targets:
+        VibeStatus: all
+        VibeStatusCore: all
+    test:
+      targets:
+        - VibeStatusCoreTests
+        - VibeStatusAppTests

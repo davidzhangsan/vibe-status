@@ -25,7 +25,8 @@ EVENTS: Tuple[Tuple[str, Optional[str]], ...] = (
     (
         "Notification",
         "permission_prompt|idle_prompt|elicitation_dialog|"
-        "elicitation_complete|elicitation_response|agent_needs_input",
+        "elicitation_complete|elicitation_response|agent_needs_input|"
+        "agent_completed",
     ),
     ("Stop", None),
     ("StopFailure", None),

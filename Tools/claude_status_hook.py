@@ -23,6 +23,10 @@ WORKING_NOTIFICATIONS = {
     "elicitation_complete",
     "elicitation_response",
 }
+READY_NOTIFICATIONS = {
+    "idle_prompt",
+    "agent_completed",
+}
 WORKING_EVENTS = {
     "UserPromptSubmit",
     "PostToolUse",
@@ -75,7 +79,7 @@ def status_for(event: Dict[str, Any]) -> Optional[str]:
         notification_type = event.get("notification_type")
         if notification_type in ATTENTION_NOTIFICATIONS:
             return "needsAttention"
-        if notification_type == "idle_prompt":
+        if notification_type in READY_NOTIFICATIONS:
             return "ready"
         if notification_type in WORKING_NOTIFICATIONS:
             return "working"

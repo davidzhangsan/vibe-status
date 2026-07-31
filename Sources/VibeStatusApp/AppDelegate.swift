@@ -99,7 +99,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSPopoverDelegate {
         guard let statusItem, let button = statusItem.button else { return }
         let counts = model.menuBarCounts
         let image = MenuBarStatusRenderer.image(for: counts)
-        statusItem.length = image.size.width + 8
+        statusItem.length = image.size.width + 2
         button.image = image
         button.setAccessibilityLabel(MenuBarStatusRenderer.accessibilityLabel(for: counts))
     }

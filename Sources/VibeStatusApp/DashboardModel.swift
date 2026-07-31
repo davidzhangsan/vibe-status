@@ -76,7 +76,6 @@ final class DashboardModel {
     private(set) var validationStates: [UUID: HostValidationState] = [:]
     private(set) var discoveredAliases: [String] = []
     private(set) var isRefreshing = false
-    private(set) var lastRefreshAt: Date?
     private(set) var transientIssue: String?
 
     var hosts: [HostProfile]
@@ -190,7 +189,6 @@ final class DashboardModel {
             for await update in updates {
                 guard !Task.isCancelled else { break }
                 self?.snapshot = update
-                self?.lastRefreshAt = Date()
                 self?.isRefreshing = false
             }
         }

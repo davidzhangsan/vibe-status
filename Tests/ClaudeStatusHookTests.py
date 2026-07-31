@@ -92,6 +92,34 @@ class ClaudeStatusHookTests(unittest.TestCase):
                 )
                 self.assertEqual(list(Path(directory).glob("*.json")), [])
 
+    def test_background_agent_completion_clears_attention(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            with mock.patch.dict(
+                os.environ,
+                {"VIBE_STATUS_CLAUDE_STATE_DIR": directory},
+                clear=False,
+            ):
+                base = {
+                    "session_id": "session-1",
+                    "cwd": "/work/repository",
+                    "hook_event_name": "Notification",
+                }
+                hook.handle({**base, "notification_type": "agent_needs_input"})
+                record_path = Path(directory) / "session-1.json"
+                record = json.loads(record_path.read_text(encoding="utf-8"))
+                self.assertEqual(record["status"], "needsAttention")
+
+                hook.handle({**base, "notification_type": "agent_completed"})
+                record = json.loads(record_path.read_text(encoding="utf-8"))
+                self.assertEqual(record["status"], "ready")
+
+        notification_matcher = next(
+            matcher
+            for event_name, matcher in configure.EVENTS
+            if event_name == "Notification"
+        )
+        self.assertIn("agent_completed", notification_matcher)
+
     def test_installer_preserves_unrelated_hooks(self) -> None:
         installed_hook = Path("/home/test/.local/lib/vibe-status/claude_status_hook.py")
         settings = {

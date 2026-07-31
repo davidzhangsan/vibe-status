@@ -59,7 +59,7 @@ private struct DashboardView: View {
             }
 
             Divider()
-            DashboardFooter(model: model)
+            DashboardFooter()
         }
     }
 }
@@ -185,8 +185,10 @@ private struct SessionRow: View {
 
                     Spacer(minLength: 0)
 
-                    Text(session.updatedAt, style: .relative)
-                        .monospacedDigit()
+                    if session.status != .ready {
+                        Text(session.updatedAt, style: .relative)
+                            .monospacedDigit()
+                    }
                 }
                 .font(.caption)
                 .foregroundStyle(.secondary)
@@ -195,9 +197,13 @@ private struct SessionRow: View {
         .padding(9)
         .background(.quinary, in: RoundedRectangle(cornerRadius: 8))
         .accessibilityElement(children: .combine)
-        .accessibilityLabel(
-            "\(session.name), \(session.status.displayName), \(hostLabel), updated \(session.updatedAt.formatted(.relative(presentation: .named)))"
-        )
+        .accessibilityLabel(accessibilityLabel)
+    }
+
+    private var accessibilityLabel: String {
+        let summary = "\(session.name), \(session.status.displayName), \(hostLabel)"
+        guard session.status != .ready else { return summary }
+        return "\(summary), updated \(session.updatedAt.formatted(.relative(presentation: .named)))"
     }
 }
 
@@ -257,16 +263,8 @@ private struct IssueRow: View {
 }
 
 private struct DashboardFooter: View {
-    @Bindable var model: DashboardModel
-
     var body: some View {
         HStack {
-            if let lastRefreshAt = model.lastRefreshAt {
-                Text("Updated \(lastRefreshAt, style: .relative)")
-            } else {
-                Text("Waiting for status")
-            }
-
             Spacer()
 
             Button("Quit") {
